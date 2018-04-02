@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-qk-IV4">
+                                <rect key="frame" x="10" y="210" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="clm-HW-X88"/>
+                                    <constraint firstAttribute="width" constant="50" id="ohS-ul-pcT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter CellPhone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0Z-fB-ysr">
+                                <rect key="frame" x="60" y="210" width="305" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="w8M-tv-DvL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-kx-hL5">
+                                <rect key="frame" x="8" y="433" width="359" height="190"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6V-6x-cDr">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ZZB-Yt-ge9"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="0Tn-JG-luJ"/>
+                                            <barButtonItem systemItem="done" id="oVx-GM-ke9">
+                                                <connections>
+                                                    <action selector="doneBtnAction:" destination="BYZ-38-t0r" id="TLp-on-Bks"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcx-GP-bdI">
+                                        <rect key="frame" x="0.0" y="30" width="359" height="160"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jcx-GP-bdI" secondAttribute="trailing" id="KKm-Ov-BPI"/>
+                                    <constraint firstAttribute="trailing" secondItem="y6V-6x-cDr" secondAttribute="trailing" id="Xxl-Ip-mvk"/>
+                                    <constraint firstItem="y6V-6x-cDr" firstAttribute="top" secondItem="9TW-kx-hL5" secondAttribute="top" id="Ya9-Bj-Tgz"/>
+                                    <constraint firstAttribute="height" constant="190" id="ifb-Cj-vDj"/>
+                                    <constraint firstItem="jcx-GP-bdI" firstAttribute="top" secondItem="y6V-6x-cDr" secondAttribute="bottom" id="taS-lQ-gd6"/>
+                                    <constraint firstItem="y6V-6x-cDr" firstAttribute="leading" secondItem="9TW-kx-hL5" secondAttribute="leading" id="u4D-SP-BV4"/>
+                                    <constraint firstItem="jcx-GP-bdI" firstAttribute="leading" secondItem="9TW-kx-hL5" secondAttribute="leading" id="uUJ-RY-0ul"/>
+                                    <constraint firstAttribute="bottom" secondItem="jcx-GP-bdI" secondAttribute="bottom" id="zMW-IF-AvP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9TW-kx-hL5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7J6-U6-0Z1"/>
+                            <constraint firstItem="w0Z-fB-ysr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="BHP-fQ-kFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w0Z-fB-ysr" secondAttribute="trailing" constant="10" id="FTW-aT-6BR"/>
+                            <constraint firstItem="w0Z-fB-ysr" firstAttribute="leading" secondItem="ItE-qk-IV4" secondAttribute="trailing" id="QZY-BZ-RRA"/>
+                            <constraint firstItem="ItE-qk-IV4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ZTh-4j-MVb"/>
+                            <constraint firstItem="ItE-qk-IV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="aLE-el-WQ1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9TW-kx-hL5" secondAttribute="bottom" id="kdm-tE-tqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9TW-kx-hL5" secondAttribute="trailing" constant="8" id="x33-gk-8Sz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="countryCodeLabel" destination="ItE-qk-IV4" id="esG-Q6-HtD"/>
+                        <outlet property="countryPickerView" destination="jcx-GP-bdI" id="bYw-hk-L45"/>
+                        <outlet property="labelDialCodeWidthConstraint" destination="ohS-ul-pcT" id="hxQ-yO-TKG"/>
+                        <outlet property="phoneNumberTxtField" destination="w0Z-fB-ysr" id="4Eq-8h-5Ot"/>
+                        <outlet property="pickerViewInstance" destination="9TW-kx-hL5" id="aMg-zW-3Ax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
